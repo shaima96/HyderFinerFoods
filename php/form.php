@@ -1,5 +1,5 @@
 <?php
-$to = 'support@itembridge.com';
+$to = 'shaimaazmi0@gmail.com';
 $subject = 'You subject';
 $headers = 'From: (Your site) <mailer@progressive.itembridge.com>' . "\r\n" . 'Content-type: text/html; charset=utf-8';
 $message = '
@@ -20,7 +20,7 @@ $message = '
 
 if (!empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['comment'])) {
 	if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-	    mail($to, $subject, $message, $headers) or die('<span style="color: red;">Error sending Mail</span>');
+	    mail($to, $subject, $message) or die('<span style="color: red;">Error sending Mail</span>');
 	    echo '<span class="send-true" style="color: #00dd63;">Your email was sent!</span>';
 	}
 } else {
